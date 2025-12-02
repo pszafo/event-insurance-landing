@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EventShield – ₹11 Micro-Insurance for Events</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: #f8fafc;
+        color: #111827;
+    }
+    header {
+        padding: 25px 40px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    header a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #2563eb;
+    }
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #2563eb, #1e3a8a);
+        color: white;
+    }
+    .hero h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .hero p {
+        font-size: 20px;
+        opacity: 0.9;
+        margin-bottom: 30px;
+    }
+    .cta-btn {
+        background: white;
+        color: #1e3a8a;
+        font-size: 18px;
+        padding: 15px 28px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .section {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+    .section h3 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+    .how-box {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #e5e7eb;
+    }
+    .pricing-box {
+        background: #eef2ff;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+    }
+    input, select, button, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+        font-size: 16px;
+    }
+    button {
+        background: #2563eb;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    footer {
+        padding: 25px;
+        text-align: center;
+        background: #1f2937;
+        color: white;
+        margin-top: 40px;
+        font-size: 15px;
+    }
+</style>
+
+<script>
+    function submitOrganizerForm(event) {
+        event.preventDefault();
+        const name = document.getElementById("orgName").value;
+        const phone = document.getElementById("orgPhone").value;
+        const msg = `Hi, I'm ${name}. I want to activate micro-insurance for my event. My contact: ${phone}`;
+
+        window.open(`https://wa.me/919999999999?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+</script>
+</head>
+
+<body>
+
+<header>
+    <h1>EventShield</h1>
+    <a href="#organizers">For Organizers</a>
+</header>
+
+<section class="hero">
+    <h2>₹11 Micro-Insurance for Event Cancellations</h2>
+    <p>Run clubs, workshops, concerts – protect your event instantly.  
+       We cover refunds. You keep your revenue.</p>
+    <a href="#organizers" class="cta-btn">Activate For My Event →</a>
+</section>
+
+<section class="section">
+    <h3>How It Works</h3>
+
+    <div class="how-box">
+        <strong>1️⃣ Add insurance at checkout</strong>
+        <p>₹11–₹49 per attendee. You don’t lose money if your event cancels.</p>
+    </div>
+
+    <div class="how-box">
+        <strong>2️⃣ Attendees opt in</strong>
+        <p>They choose insurance while buying tickets.</p>
+    </div>
+
+    <div class="how-box">
+        <strong>3️⃣ If cancelled, they get paid</strong>
+        <p>Rain / venue issue / safety concerns → instant payout.</p>
+    </div>
+
+    <div class="how-box">
+        <strong>4️⃣ We partner with certified insurance agents</strong>
+        <p>We take the risk. Organizers get peace of mind.</p>
+    </div>
+</section>
+
+<section id="pricing" class="section">
+    <h3>Simple Pricing</h3>
+    <div class="pricing-box">
+        <h2>₹11 / attendee</h2>
+        <p>No subscription. No setup cost.</p>
+        <p>You keep 100% of ticket revenue even if event is cancelled.</p>
+    </div>
+</section>
+
+<section id="organizers" class="section">
+    <h3>Activate Insurance For Your Event</h3>
+
+    <div class="form-container">
+        <form onsubmit="submitOrganizerForm(event)">
+            <label>Organizer Name</label>
+            <input type="text" id="orgName" required />
+
+            <label>Phone Number (WhatsApp)</label>
+            <input type="text" id="orgPhone" required />
+
+            <label>Event Name</label>
+            <input type="text" required />
+
+            <label>Expected Participants</label>
+            <input type="number" required />
+
+            <label>City</label>
+            <input type="text" required />
+
+            <button type="submit">Submit & Open WhatsApp →</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2025 EventShield — Micro-Insurance for Events
+</footer>
+
+</body>
+</html>
